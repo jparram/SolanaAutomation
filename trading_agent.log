@@ -1,0 +1,270 @@
+2025-06-11 18:29:36,064 - solana_trading_desktop - INFO - Initializing Solana Trading Desktop...
+2025-06-11 18:29:36,064 - solana_trading_desktop - INFO - Trading enabled: False
+2025-06-11 18:29:36,064 - solana_trading_desktop - INFO - Max trade amount: 0.01 SOL
+2025-06-11 18:29:36,064 - solana_trading_desktop - INFO - Daily trade limit: 5
+2025-06-11 18:29:36,064 - solana_trading_desktop - INFO - Wallet initialized: SimulatedSolanaAddress123456789
+2025-06-11 18:29:36,065 - solana_trading_desktop - INFO - Starting Solana trading agent...
+2025-06-11 18:29:36,065 - solana_trading_desktop - INFO - Starting desktop sandbox...
+2025-06-11 18:29:36,072 - e2b.api - INFO - Request POST https://api.e2b.app/sandboxes
+2025-06-11 18:29:36,212 - httpx - INFO - HTTP Request: POST https://api.e2b.app/sandboxes "HTTP/1.1 401 Unauthorized"
+2025-06-11 18:29:36,212 - e2b.api - ERROR - Response 401
+2025-06-11 18:29:36,213 - solana_trading_desktop - ERROR - Error setting up desktop: 401: Invalid API key, please visit https://e2b.dev/docs/quickstart/api-key for more information. authorization header is malformed
+2025-06-11 18:29:36,213 - solana_trading_desktop - ERROR - Error starting trading agent: 401: Invalid API key, please visit https://e2b.dev/docs/quickstart/api-key for more information. authorization header is malformed
+2025-06-11 18:29:36,213 - solana_trading_desktop - ERROR - Error in main: 401: Invalid API key, please visit https://e2b.dev/docs/quickstart/api-key for more information. authorization header is malformed
+2025-06-11 18:29:36,213 - solana_trading_desktop - INFO - Shutting down trading agent...
+2025-06-11 18:29:36,213 - solana_trading_desktop - INFO - Stopping trading agent...
+2025-06-11 18:31:36,668 - solana_trading_desktop - INFO - Initializing Solana Trading Desktop...
+2025-06-11 18:31:36,669 - solana_trading_desktop - INFO - Trading enabled: False
+2025-06-11 18:31:36,669 - solana_trading_desktop - INFO - Max trade amount: 0.01 SOL
+2025-06-11 18:31:36,669 - solana_trading_desktop - INFO - Daily trade limit: 5
+2025-06-11 18:31:36,669 - solana_trading_desktop - INFO - Wallet initialized: SimulatedSolanaAddress123456789
+2025-06-11 18:31:36,669 - solana_trading_desktop - INFO - Starting Solana trading agent...
+2025-06-11 18:31:36,669 - solana_trading_desktop - INFO - Starting desktop sandbox...
+2025-06-11 18:31:36,676 - e2b.api - INFO - Request POST https://api.e2b.app/sandboxes
+2025-06-11 18:31:36,772 - httpx - INFO - HTTP Request: POST https://api.e2b.app/sandboxes "HTTP/1.1 401 Unauthorized"
+2025-06-11 18:31:36,772 - e2b.api - ERROR - Response 401
+2025-06-11 18:31:36,773 - solana_trading_desktop - ERROR - Error setting up desktop: 401: Invalid API key, please visit https://e2b.dev/docs/quickstart/api-key for more information. authorization header is malformed
+2025-06-11 18:31:36,773 - solana_trading_desktop - ERROR - Error starting trading agent: 401: Invalid API key, please visit https://e2b.dev/docs/quickstart/api-key for more information. authorization header is malformed
+2025-06-11 18:31:36,773 - solana_trading_desktop - ERROR - Error in main: 401: Invalid API key, please visit https://e2b.dev/docs/quickstart/api-key for more information. authorization header is malformed
+2025-06-11 18:31:36,773 - solana_trading_desktop - INFO - Shutting down trading agent...
+2025-06-11 18:31:36,773 - solana_trading_desktop - INFO - Stopping trading agent...
+2025-06-11 18:33:06,910 - solana_trading_desktop - INFO - Wallet initialized: SimulatedSolanaAddress123456789
+2025-06-11 18:33:06,910 - solana_trading_desktop - INFO - Initializing Solana Trading Desktop in headless simulation mode...
+2025-06-11 18:33:06,911 - solana_trading_desktop - INFO - Trading enabled: False
+2025-06-11 18:33:06,911 - solana_trading_desktop - INFO - Max trade amount: 0.01 SOL
+2025-06-11 18:33:06,911 - solana_trading_desktop - INFO - Daily trade limit: 5
+2025-06-11 18:33:06,911 - solana_trading_desktop - INFO - Starting Solana trading agent...
+2025-06-11 18:33:06,911 - solana_trading_desktop - INFO - Starting desktop sandbox...
+2025-06-11 18:33:06,920 - e2b.api - INFO - Request POST https://api.e2b.app/sandboxes
+2025-06-11 18:33:07,023 - httpx - INFO - HTTP Request: POST https://api.e2b.app/sandboxes "HTTP/1.1 401 Unauthorized"
+2025-06-11 18:33:07,023 - e2b.api - ERROR - Response 401
+2025-06-11 18:33:07,023 - solana_trading_desktop - ERROR - Error setting up desktop: 401: Invalid API key, please visit https://e2b.dev/docs/quickstart/api-key for more information. authorization header is malformed
+2025-06-11 18:33:07,023 - solana_trading_desktop - ERROR - Error starting trading agent: 401: Invalid API key, please visit https://e2b.dev/docs/quickstart/api-key for more information. authorization header is malformed
+2025-06-11 18:33:07,023 - solana_trading_desktop - ERROR - Error in trading agent: 401: Invalid API key, please visit https://e2b.dev/docs/quickstart/api-key for more information. authorization header is malformed
+2025-06-11 18:33:07,024 - solana_trading_desktop - INFO - Shutting down trading agent...
+2025-06-11 18:33:07,024 - solana_trading_desktop - INFO - Stopping trading agent...
+2025-06-11 18:33:07,024 - solana_trading_desktop - INFO - Trading agent stopped
+2025-06-11 22:06:12,182 - solana_trading_desktop - INFO - Wallet initialized: SimulatedSolanaAddress123456789
+2025-06-11 22:06:12,182 - solana_trading_desktop - INFO - Initializing Solana Trading Desktop in headless simulation mode...
+2025-06-11 22:06:12,182 - solana_trading_desktop - INFO - Trading enabled: False
+2025-06-11 22:06:12,182 - solana_trading_desktop - INFO - Max trade amount: 0.01 SOL
+2025-06-11 22:06:12,182 - solana_trading_desktop - INFO - Daily trade limit: 5
+2025-06-11 22:06:12,182 - solana_trading_desktop - INFO - Starting Solana trading agent...
+2025-06-11 22:06:12,182 - solana_trading_desktop - INFO - Starting desktop sandbox...
+2025-06-11 22:06:12,191 - e2b.api - INFO - Request POST https://api.e2b.app/sandboxes
+2025-06-11 22:06:12,333 - httpx - INFO - HTTP Request: POST https://api.e2b.app/sandboxes "HTTP/1.1 401 Unauthorized"
+2025-06-11 22:06:12,333 - e2b.api - ERROR - Response 401
+2025-06-11 22:06:12,333 - solana_trading_desktop - ERROR - Error setting up desktop: 401: Invalid API key, please visit https://e2b.dev/docs/quickstart/api-key for more information. authorization header is malformed
+2025-06-11 22:06:12,333 - solana_trading_desktop - ERROR - Error starting trading agent: 401: Invalid API key, please visit https://e2b.dev/docs/quickstart/api-key for more information. authorization header is malformed
+2025-06-11 22:06:12,333 - solana_trading_desktop - ERROR - Error in trading agent: 401: Invalid API key, please visit https://e2b.dev/docs/quickstart/api-key for more information. authorization header is malformed
+2025-06-11 22:06:12,333 - solana_trading_desktop - INFO - Shutting down trading agent...
+2025-06-11 22:06:12,333 - solana_trading_desktop - INFO - Stopping trading agent...
+2025-06-11 22:06:12,333 - solana_trading_desktop - INFO - Trading agent stopped
+2025-06-11 22:13:21,949 - solana_trading_desktop - INFO - Wallet initialized: SimulatedSolanaAddress123456789
+2025-06-11 22:13:21,949 - solana_trading_desktop - INFO - Initializing Solana Trading Desktop in headless simulation mode...
+2025-06-11 22:13:21,949 - solana_trading_desktop - INFO - Trading enabled: False
+2025-06-11 22:13:21,949 - solana_trading_desktop - INFO - Max trade amount: 0.01 SOL
+2025-06-11 22:13:21,949 - solana_trading_desktop - INFO - Daily trade limit: 5
+2025-06-11 22:13:21,949 - solana_trading_desktop - INFO - Starting Solana trading agent...
+2025-06-11 22:13:21,950 - solana_trading_desktop - INFO - Starting desktop sandbox...
+2025-06-11 22:13:21,956 - e2b.api - INFO - Request POST https://api.e2b.app/sandboxes
+2025-06-11 22:13:22,653 - httpx - INFO - HTTP Request: POST https://api.e2b.app/sandboxes "HTTP/1.1 201 Created"
+2025-06-11 22:13:22,653 - e2b.api - INFO - Response 201
+2025-06-11 22:13:23,928 - solana_trading_desktop - INFO - Desktop screen size: 1024x768
+2025-06-11 22:13:25,382 - solana_trading_desktop - INFO - Desktop stream URL: https://6080-i3x558369slxne7r4ka32-3772df97.e2b.app/vnc.html?autoconnect=true&resize=scale&password=oQ8j1L5nCIGkBnke
+2025-06-11 22:13:30,578 - solana_trading_desktop - INFO - Trading agent started successfully in simulation mode
+2025-06-11 22:13:30,579 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-11 22:13:30,579 - solana_trading_desktop - ERROR - Error getting balance: 'dict' object has no attribute 'value'
+2025-06-11 22:13:30,580 - solana_trading_desktop - INFO - Simulated wallet balance: 0.0000 SOL
+2025-06-11 22:13:30,881 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-11 22:13:41,554 - e2b.sandbox_sync.main - INFO - Request: GET https://49983-i3x558369slxne7r4ka32-3772df97.e2b.app/files
+2025-06-11 22:13:41,653 - e2b.sandbox_sync.main - INFO - Response: 200 https://49983-i3x558369slxne7r4ka32-3772df97.e2b.app/files
+2025-06-11 22:13:41,653 - httpx - INFO - HTTP Request: GET https://49983-i3x558369slxne7r4ka32-3772df97.e2b.app/files?path=%2Ftmp%2Fscreenshot-39c7f23d-bbe5-4116-81b5-8ad73f4d15f1.png&username=user "HTTP/1.1 200 OK"
+2025-06-11 22:13:47,424 - e2b.sandbox_sync.main - INFO - Request: GET https://49983-i3x558369slxne7r4ka32-3772df97.e2b.app/files
+2025-06-11 22:13:47,510 - e2b.sandbox_sync.main - INFO - Response: 200 https://49983-i3x558369slxne7r4ka32-3772df97.e2b.app/files
+2025-06-11 22:13:47,510 - httpx - INFO - HTTP Request: GET https://49983-i3x558369slxne7r4ka32-3772df97.e2b.app/files?path=%2Ftmp%2Fscreenshot-1858fab8-a8d7-42c5-8c45-1c9e5999eb82.png&username=user "HTTP/1.1 200 OK"
+2025-06-11 22:13:53,346 - e2b.sandbox_sync.main - INFO - Request: GET https://49983-i3x558369slxne7r4ka32-3772df97.e2b.app/files
+2025-06-11 22:13:53,425 - e2b.sandbox_sync.main - INFO - Response: 200 https://49983-i3x558369slxne7r4ka32-3772df97.e2b.app/files
+2025-06-11 22:13:53,426 - httpx - INFO - HTTP Request: GET https://49983-i3x558369slxne7r4ka32-3772df97.e2b.app/files?path=%2Ftmp%2Fscreenshot-f1875461-cbc7-4b93-a29f-807ebafe6d86.png&username=user "HTTP/1.1 200 OK"
+2025-06-11 22:13:53,537 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-11 22:18:53,543 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-11 22:18:53,878 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-11 22:18:53,996 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-11 22:18:53,996 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-11 22:23:54,004 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-11 22:23:54,262 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-11 22:23:54,379 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-11 22:23:54,379 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-11 22:24:13,112 - solana_trading_desktop - INFO - Shutting down trading agent...
+2025-06-11 22:24:13,113 - solana_trading_desktop - INFO - Stopping trading agent...
+2025-06-11 22:30:53,767 - solana_trading_desktop - INFO - Wallet initialized: SimulatedSolanaAddress123456789
+2025-06-11 22:30:53,768 - solana_trading_desktop - INFO - Initializing Solana Trading Desktop in headless simulation mode...
+2025-06-11 22:30:53,768 - solana_trading_desktop - INFO - Trading enabled: False
+2025-06-11 22:30:53,768 - solana_trading_desktop - INFO - Max trade amount: 0.01 SOL
+2025-06-11 22:30:53,768 - solana_trading_desktop - INFO - Daily trade limit: 5
+2025-06-11 22:30:53,768 - solana_trading_desktop - INFO - Starting Solana trading agent...
+2025-06-11 22:30:53,768 - solana_trading_desktop - INFO - Starting desktop sandbox...
+2025-06-11 22:30:53,791 - e2b.api - INFO - Request POST https://api.e2b.app/sandboxes
+2025-06-11 22:30:54,360 - httpx - INFO - HTTP Request: POST https://api.e2b.app/sandboxes "HTTP/1.1 201 Created"
+2025-06-11 22:30:54,360 - e2b.api - INFO - Response 201
+2025-06-11 22:30:55,557 - solana_trading_desktop - INFO - Desktop screen size: 1024x768
+2025-06-11 22:30:56,670 - solana_trading_desktop - INFO - Desktop stream URL: https://6080-i9q0r6yz6freimwysi9n4-4003fa47.e2b.app/vnc.html?autoconnect=true&resize=scale&password=LzQ9Xt5f2k0S9INk
+2025-06-11 22:31:01,863 - solana_trading_desktop - INFO - Trading agent started successfully in simulation mode
+2025-06-11 22:31:01,863 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-11 22:31:01,864 - solana_trading_desktop - ERROR - Error getting balance: 'dict' object has no attribute 'value'
+2025-06-11 22:31:01,865 - solana_trading_desktop - INFO - Simulated wallet balance: 0.0000 SOL
+2025-06-11 22:31:02,194 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-11 22:31:13,180 - e2b.sandbox_sync.main - INFO - Request: GET https://49983-i9q0r6yz6freimwysi9n4-4003fa47.e2b.app/files
+2025-06-11 22:31:13,290 - e2b.sandbox_sync.main - INFO - Response: 200 https://49983-i9q0r6yz6freimwysi9n4-4003fa47.e2b.app/files
+2025-06-11 22:31:13,290 - httpx - INFO - HTTP Request: GET https://49983-i9q0r6yz6freimwysi9n4-4003fa47.e2b.app/files?path=%2Ftmp%2Fscreenshot-92f706a4-f115-44b3-b151-183ff6db0f9b.png&username=user "HTTP/1.1 200 OK"
+2025-06-11 22:31:19,081 - e2b.sandbox_sync.main - INFO - Request: GET https://49983-i9q0r6yz6freimwysi9n4-4003fa47.e2b.app/files
+2025-06-11 22:31:19,160 - e2b.sandbox_sync.main - INFO - Response: 200 https://49983-i9q0r6yz6freimwysi9n4-4003fa47.e2b.app/files
+2025-06-11 22:31:19,160 - httpx - INFO - HTTP Request: GET https://49983-i9q0r6yz6freimwysi9n4-4003fa47.e2b.app/files?path=%2Ftmp%2Fscreenshot-b5c82a30-62dd-4755-884e-6d259bb0ef0a.png&username=user "HTTP/1.1 200 OK"
+2025-06-11 22:31:25,005 - e2b.sandbox_sync.main - INFO - Request: GET https://49983-i9q0r6yz6freimwysi9n4-4003fa47.e2b.app/files
+2025-06-11 22:31:25,102 - e2b.sandbox_sync.main - INFO - Response: 200 https://49983-i9q0r6yz6freimwysi9n4-4003fa47.e2b.app/files
+2025-06-11 22:31:25,102 - httpx - INFO - HTTP Request: GET https://49983-i9q0r6yz6freimwysi9n4-4003fa47.e2b.app/files?path=%2Ftmp%2Fscreenshot-c868e9e1-13c1-4f34-a83e-2d673e4d2aa4.png&username=user "HTTP/1.1 200 OK"
+2025-06-11 22:31:25,354 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-11 22:36:25,410 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-11 22:36:25,765 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-11 22:36:25,872 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-11 22:36:25,872 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-11 22:39:30,567 - solana_trading_desktop - INFO - Wallet initialized: SimulatedSolanaAddress123456789
+2025-06-11 22:39:30,567 - solana_trading_desktop - INFO - Initializing Solana Trading Desktop in headless simulation mode...
+2025-06-11 22:39:30,567 - solana_trading_desktop - INFO - Trading enabled: False
+2025-06-11 22:39:30,567 - solana_trading_desktop - INFO - Max trade amount: 0.01 SOL
+2025-06-11 22:39:30,567 - solana_trading_desktop - INFO - Daily trade limit: 5
+2025-06-11 22:39:30,567 - solana_trading_desktop - INFO - Starting Solana trading agent...
+2025-06-11 22:39:30,567 - solana_trading_desktop - INFO - Starting desktop sandbox...
+2025-06-11 22:39:30,575 - e2b.api - INFO - Request POST https://api.e2b.app/sandboxes
+2025-06-11 22:39:30,687 - httpx - INFO - HTTP Request: POST https://api.e2b.app/sandboxes "HTTP/1.1 401 Unauthorized"
+2025-06-11 22:39:30,687 - e2b.api - ERROR - Response 401
+2025-06-11 22:39:30,687 - solana_trading_desktop - ERROR - Error setting up desktop: 401: Invalid API key, please visit https://e2b.dev/docs/quickstart/api-key for more information. authorization header is malformed
+2025-06-11 22:39:30,688 - solana_trading_desktop - ERROR - Error starting trading agent: 401: Invalid API key, please visit https://e2b.dev/docs/quickstart/api-key for more information. authorization header is malformed
+2025-06-11 22:39:30,688 - solana_trading_desktop - ERROR - Error in trading agent: 401: Invalid API key, please visit https://e2b.dev/docs/quickstart/api-key for more information. authorization header is malformed
+2025-06-11 22:39:30,688 - solana_trading_desktop - INFO - Shutting down trading agent...
+2025-06-11 22:39:30,688 - solana_trading_desktop - INFO - Stopping trading agent...
+2025-06-11 22:39:30,688 - solana_trading_desktop - INFO - Trading agent stopped
+2025-06-11 22:44:32,100 - solana_trading_desktop - INFO - Wallet initialized: SimulatedSolanaAddress123456789
+2025-06-11 22:44:32,100 - solana_trading_desktop - INFO - Initializing Solana Trading Desktop in headless simulation mode...
+2025-06-11 22:44:32,100 - solana_trading_desktop - INFO - Trading enabled: False
+2025-06-11 22:44:32,100 - solana_trading_desktop - INFO - Max trade amount: 0.01 SOL
+2025-06-11 22:44:32,100 - solana_trading_desktop - INFO - Daily trade limit: 5
+2025-06-11 22:44:32,100 - solana_trading_desktop - INFO - Starting Solana trading agent...
+2025-06-11 22:44:32,100 - solana_trading_desktop - INFO - Starting desktop sandbox...
+2025-06-11 22:44:32,107 - e2b.api - INFO - Request POST https://api.e2b.app/sandboxes
+2025-06-11 22:44:32,907 - httpx - INFO - HTTP Request: POST https://api.e2b.app/sandboxes "HTTP/1.1 201 Created"
+2025-06-11 22:44:32,907 - e2b.api - INFO - Response 201
+2025-06-11 22:44:34,144 - solana_trading_desktop - INFO - Desktop screen size: 1024x768
+2025-06-11 22:44:35,536 - solana_trading_desktop - INFO - Desktop stream URL: https://6080-ilnwx1bwobvwxglli403l-38b78124.e2b.app/vnc.html?autoconnect=true&resize=scale&password=FiaamvAieodMCDL9
+2025-06-11 22:44:40,755 - solana_trading_desktop - INFO - Trading agent started successfully in simulation mode
+2025-06-11 22:44:40,756 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-11 22:44:40,756 - solana_trading_desktop - ERROR - Error getting balance: 'dict' object has no attribute 'value'
+2025-06-11 22:44:40,756 - solana_trading_desktop - INFO - Simulated wallet balance: 0.0000 SOL
+2025-06-11 22:44:41,072 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-11 22:44:51,980 - e2b.sandbox_sync.main - INFO - Request: GET https://49983-ilnwx1bwobvwxglli403l-38b78124.e2b.app/files
+2025-06-11 22:44:52,065 - e2b.sandbox_sync.main - INFO - Response: 200 https://49983-ilnwx1bwobvwxglli403l-38b78124.e2b.app/files
+2025-06-11 22:44:52,065 - httpx - INFO - HTTP Request: GET https://49983-ilnwx1bwobvwxglli403l-38b78124.e2b.app/files?path=%2Ftmp%2Fscreenshot-82e1b2c9-a02d-4e52-b35d-e38f5a60f1ba.png&username=user "HTTP/1.1 200 OK"
+2025-06-11 22:44:57,899 - e2b.sandbox_sync.main - INFO - Request: GET https://49983-ilnwx1bwobvwxglli403l-38b78124.e2b.app/files
+2025-06-11 22:44:57,989 - e2b.sandbox_sync.main - INFO - Response: 200 https://49983-ilnwx1bwobvwxglli403l-38b78124.e2b.app/files
+2025-06-11 22:44:57,989 - httpx - INFO - HTTP Request: GET https://49983-ilnwx1bwobvwxglli403l-38b78124.e2b.app/files?path=%2Ftmp%2Fscreenshot-35788e8c-fb9d-4a0f-87ff-6978a94005e8.png&username=user "HTTP/1.1 200 OK"
+2025-06-11 22:45:03,790 - e2b.sandbox_sync.main - INFO - Request: GET https://49983-ilnwx1bwobvwxglli403l-38b78124.e2b.app/files
+2025-06-11 22:45:03,864 - e2b.sandbox_sync.main - INFO - Response: 200 https://49983-ilnwx1bwobvwxglli403l-38b78124.e2b.app/files
+2025-06-11 22:45:03,864 - httpx - INFO - HTTP Request: GET https://49983-ilnwx1bwobvwxglli403l-38b78124.e2b.app/files?path=%2Ftmp%2Fscreenshot-c07ae305-3755-412d-9fed-92c23390935a.png&username=user "HTTP/1.1 200 OK"
+2025-06-11 22:45:03,978 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-11 22:50:03,989 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-11 22:50:04,141 - solana_trading_desktop - INFO - Fetched data for 2 symbols
+2025-06-11 22:50:04,240 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-11 22:50:04,240 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-11 22:55:04,242 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-11 22:55:04,624 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-11 22:55:04,832 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-11 22:55:04,833 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-11 23:00:04,842 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-11 23:00:05,174 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-11 23:00:05,279 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-11 23:00:05,279 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-11 23:05:05,289 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-11 23:05:05,636 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-11 23:05:05,822 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-11 23:05:05,822 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-11 23:10:05,873 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-11 23:10:06,501 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-11 23:10:06,674 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-11 23:10:06,674 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-11 23:15:06,713 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-11 23:15:07,023 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-11 23:15:07,219 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-11 23:15:07,219 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-11 23:20:07,228 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-11 23:20:07,583 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-11 23:20:07,690 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-11 23:20:07,690 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-11 23:25:07,701 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-11 23:25:08,078 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-11 23:25:08,297 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-11 23:25:08,297 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-11 23:30:08,285 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-11 23:30:08,600 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-11 23:30:08,877 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-11 23:30:08,877 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-11 23:35:08,881 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-11 23:35:09,219 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-11 23:35:09,421 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-11 23:35:09,421 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-11 23:40:09,429 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-11 23:40:09,719 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-11 23:40:09,834 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-11 23:40:09,835 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-11 23:45:09,844 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-11 23:45:10,157 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-11 23:45:10,270 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-11 23:45:10,270 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-11 23:50:10,277 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-11 23:50:10,564 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-11 23:50:10,668 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-11 23:50:10,668 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-11 23:55:10,676 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-11 23:55:11,034 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-11 23:55:11,175 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-11 23:55:11,176 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-12 00:00:11,182 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-12 00:00:11,474 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-12 00:00:11,579 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-12 00:00:11,579 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-12 00:08:50,885 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-12 00:08:51,298 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-12 00:08:51,558 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-12 00:08:51,559 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-12 00:13:51,564 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-12 00:13:51,868 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-12 00:13:51,970 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-12 00:13:51,970 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-12 00:20:48,520 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-12 00:20:48,856 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-12 00:20:48,991 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-12 00:20:48,991 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-12 02:25:55,647 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-12 02:25:56,466 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-12 02:25:56,616 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-12 02:25:56,616 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-12 09:00:14,062 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-12 09:00:14,357 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-12 09:00:14,552 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-12 09:00:14,561 - solana_trading_desktop - INFO - Generated 1 trading signals
+2025-06-12 09:00:14,561 - solana_trading_desktop - INFO - Trading disabled - would execute: SELL solana
+2025-06-12 09:30:26,984 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-12 09:30:27,345 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-12 09:30:27,600 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-12 09:30:27,630 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-12 09:35:27,637 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-12 09:35:27,999 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-12 09:35:28,117 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-12 09:35:28,119 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-12 09:40:28,126 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-12 09:40:28,425 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-12 09:40:28,572 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-12 09:40:28,572 - solana_trading_desktop - INFO - Generated 0 trading signals
+2025-06-12 09:52:40,561 - solana_trading_desktop - INFO - Starting trading cycle...
+2025-06-12 09:52:40,833 - solana_trading_desktop - INFO - Fetched data for 3 symbols
+2025-06-12 09:52:41,033 - solana_trading_desktop - ERROR - Error analyzing sentiment: Attempted to access 'response.content' on a streaming response. Call 'response.read()' first.
+2025-06-12 09:52:41,033 - solana_trading_desktop - INFO - Generated 0 trading signals

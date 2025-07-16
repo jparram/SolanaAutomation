@@ -1,42 +1,239 @@
-Solana Use
+# Solana-Automation Toolkit
 
-This guide provides a complete walkthrough of the Solana--Use project, a powerful Solana blockchain automation toolkit built in Python that enables advanced trading strategies, agent-based automation, and secure wallet management.
+**Authors**: 8bit & @0rdlibrary
 
-📚 Table of Contents - Main Project
-Introduction
-Installation & Setup
-Key Components
-Core Features
-Development Workflow
-Best Practices
-Troubleshooting
-Introduction
-The Solana--Use project is a comprehensive automation toolkit for the Solana blockchain, combining AI agent capabilities with robust trading and wallet management features. It's designed for developers and traders who need reliable, secure automation for Solana-based operations.
+This guide provides a complete walkthrough of the Solana-Automation project, a comprehensive Solana blockchain automation toolkit built in Python that enables advanced trading strategies, AI agent-based automation, DeFi protocol integrations, and secure wallet management.
 
-Installation & Setup
-bash
+## 📚 Table of Contents
+
+### Main Project
+- [Introduction](#introduction)
+- [Installation & Setup](#installation--setup)
+- [Project Structure](#project-structure)
+- [Key Components](#key-components)
+- [Core Features](#core-features)
+- [Development Workflow](#development-workflow)
+- [Best Practices](#best-practices)
+- [Troubleshooting](#troubleshooting)
+
+### MCP Server
+- [MCP Server Overview](#mcp-server-overview)
+- [Server Architecture](#server-architecture)
+- [API Reference](#api-reference)
+- [Phala Integration](#phala-integration)
+- [Deployment Guide](#deployment-guide)
+- [Security Considerations](#security-considerations)
+## Introduction
+
+The Solana-Automation project is a comprehensive automation toolkit for the Solana blockchain, combining AI agent capabilities with robust trading and wallet management features. It's designed for developers and traders who need reliable, secure automation for Solana-based operations.
+
+## Installation & Setup
+
+### Prerequisites
+- Python 3.8+ (recommended: Python 3.13+)
+- Node.js 18+ and npm/pnpm
+- Chrome browser (for browser automation)
+- MongoDB and Redis (for data storage)
+
+### Quick Start
+
+```bash
 # Clone the repository
-git clone https://github.com/yourusername/Solana--Use.git
-cd Solana--Use
+git clone https://github.com/yourusername/Solana-Automation.git
+cd Solana-Automation
 
 # Create and activate a virtual environment
 python -m venv solana_venv
 source solana_venv/bin/activate  # On Windows: solana_venv\Scripts\activate
 
-# Install dependencies
+# Install Python dependencies
 pip install -r requirements.txt
-Environment Configuration
-Create a .env file in the project root with:
 
+# Install Node.js dependencies for MCP server
+cd mcp-server
+npm install
+cd ..
+
+# Install Metaplex integration dependencies
+cd metaplex-integration
+npm install
+cd ..
+```
+
+### Full Build Process
+
+```bash
+# 1. Set up Python environment
+python -m venv solana_venv
+source solana_venv/bin/activate
+
+# 2. Install core Python dependencies
+pip install -r requirements.txt
+
+# 3. Install solana-agent-kit dependencies
+cd solana-agent-kit-py-main
+pip install -e .
+cd ..
+
+# 4. Set up MCP server
+cd mcp-server
+npm install
+npm run build
+cd ..
+
+# 5. Set up Metaplex integration
+cd metaplex-integration
+npm install
+npm run build
+cd ..
+
+# 6. Verify installation
+python code/main-script.py --help
+```
+### Environment Configuration
+
+Create a `.env` file in the project root with:
+
+```env
+# Solana Configuration
 SOLANA_PRIVATE_KEY=your_private_key_here
 SOLANA_RPC_URL=your_rpc_endpoint_here
+
+# AI Provider APIs
 OPENAI_API_KEY=your_openai_key_here
+ANTHROPIC_API_KEY=your_anthropic_key_here
+XAI_API_KEY=your_xai_key_here
+OPENROUTER_API_KEY=your_openrouter_key_here
+
+# Third-party APIs
 BIRDEYE_API_KEY=your_birdeye_key_here
+PHALA_API_KEY=your_phala_key_here
+HELIUS_API_KEY=your_helius_key_here
+
+# Database Configuration
+MONGODB_URI=mongodb://localhost:27017/solana-automation
+REDIS_URL=redis://localhost:6379
+
+# Trading Configuration
 TRADING_ENABLED=false
 DEBUG_MODE=true
 MAX_TRADE_AMOUNT=0.1
 MAX_DAILY_TRADES=5
-Key Components
+
+# MCP Server Configuration
+BEARER_TOKEN=your_bearer_token_here
+PORT=3000
+
+# X402 Protocol Configuration
+X402_ENABLED=false
+X402_FACILITATOR_URL=https://facilitator.x402.com
+```
+
+## Project Structure
+
+This project is organized into specialized directories, each serving a specific purpose in the Solana automation ecosystem:
+
+### 📁 Core Directories
+
+#### `/code` - Core Application Logic
+- **`main-script.py`** - Main CLI interface for the SolanaChainAI system
+- **`solana-ai-agent.py`** - AI agent implementation with blockchain integration
+- **`solana-agent-browser-module.py`** - Browser automation for market research
+- **`solana-metaplex-integration.ts`** - TypeScript integration for Metaplex NFT operations
+- **`x402-integration.py`** - X402 protocol payment integration
+- **`x402-umi-integration.ts`** - UMI integration for X402 protocol
+
+#### `/config` - Configuration Management
+- **`settings.py`** - Central configuration with API keys, database URIs, and environment variables
+- Supports multiple AI providers (OpenAI, Anthropic, XAI, OpenRouter)
+- MongoDB and Redis connection settings
+- JWT authentication and Solana RPC configuration
+
+#### `/tools` - Comprehensive Blockchain Toolkit
+- **Token Operations**: `deploy_token.py`, `get_token_data.py`, `trade.py`
+- **DeFi Integrations**: `use_raydium.py`, `use_drift.py`, `use_jito.py`
+- **NFT Operations**: `use_metaplex.py`, `create_image.py`
+- **Wallet Management**: `get_balance.py`, `transfer.py`
+- **Browser Automation**: `webautomation.py`, `chromeconfig.py`
+
+#### `/utils` - Utility Functions
+- Protocol-specific utilities (Raydium, Meteora, Moonshot, Helius)
+- Wallet and keypair management
+- Transaction utilities and JSON conversion helpers
+
+#### `/api` - FastAPI Web Service
+- RESTful API endpoints for external integrations
+- Authentication and rate limiting
+- Comprehensive blockchain operation endpoints
+
+### 📁 Specialized Modules
+
+#### `/mcp-server` - Model Control Protocol Server
+- **`src/index.ts`** - Main TypeScript server implementation
+- **`package.json`** - Node.js dependencies and scripts
+- **`deploy.sh`** - Cloud deployment automation
+- RESTful API for Solana blockchain interactions
+- Phala Network integration for confidential computing
+
+#### `/metaplex-integration` - NFT Protocol Integration
+- Metaplex standard NFT creation and minting
+- Metadata management and token standards
+- Integration with Solana NFT ecosystem
+
+#### `/payment` - X402 Protocol Implementation
+- **`x402_module.py`** - Payment handler with multi-token support
+- Payment verification and history tracking
+- HTTP client with automatic payment processing
+
+#### `/solana-agent-kit-py-main` - Core Agent Toolkit
+- **`solana_agent_kit/`** - Main package with tools and utilities
+- **`tools/`** - Comprehensive Solana interaction tools
+- **`examples/`** - Usage examples and integrations
+- **`autogen-python/`** - AutoGen multi-agent system integration
+
+### 📁 Data & Storage
+
+#### `/data` - Application Data Storage
+- Cache files and temporary data
+- User preferences and session data
+
+#### `/logs` - System Logging
+- Application logs and debug information
+- Error tracking and performance monitoring
+
+#### `/reports` - Analytics & Reporting
+- Generated reports and analytics data
+- Trading performance and system metrics
+
+#### `/screenshots` - Browser Automation Assets
+- Screenshots from browser automation tasks
+- Visual documentation of market research
+
+### 📁 Additional Components
+
+#### `/characters` - AI Agent Personalities
+- Character definitions for different AI agent types
+- Behavioral patterns and response templates
+
+#### `/browser` - Web Automation
+- Browser automation modules
+- Market data scraping and analysis tools
+
+#### `/tasks` - Task Management
+- **`task.py`** - Task scheduling and execution system
+- Automated operation management
+
+#### `/docs` - Documentation
+- **`README.md`** - Project overview and usage instructions
+- **`complete_guide.md`** - Comprehensive project guide
+- **`x402-*.md`** - X402 protocol documentation
+- Installation guides and API references
+
+#### `/solana_venv` - Python Virtual Environment
+- Isolated Python environment with project dependencies
+- Ensures consistent package versions across deployments
+
+## Key Components
 1. Trading Agent System
 The core of the project is the trading agent system (
 solana_trading_desktop.py

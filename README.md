@@ -1,327 +1,209 @@
-Solana Use
+Introduction: The Solana Terminals AI Automation Platform
 
-This guide provides a complete walkthrough of the Solana--Use project, a powerful Solana blockchain automation toolkit built in Python that enables advanced trading strategies, agent-based automation, and secure wallet management.
+This guide outlines a comprehensive, multi-agent platform designed for sophisticated interaction with the Solana ecosystem. It combines a user-friendly desktop interface with powerful backend services for AI-driven research, browser automation, and automated trading.
 
-📚 Table of Contents - Main Project
-Introduction
-Installation & Setup
-Key Components
-Core Features
-Development Workflow
-Best Practices
-Troubleshooting
-Introduction
-The Solana--Use project is a comprehensive automation toolkit for the Solana blockchain, combining AI agent capabilities with robust trading and wallet management features. It's designed for developers and traders who need reliable, secure automation for Solana-based operations.
+At its core, the system functions as a Multi-Agent Consensus Platform (MCP), where specialized AI agents collaborate to analyze data, propose actions, and execute trades. The entire process is orchestrated by a central Terminagent, which acts as the conductor, coordinating the actions of the agent council and ensuring a cohesive strategy.
 
-Installation & Setup
-bash
-# Clone the repository
-git clone https://github.com/yourusername/Solana--Use.git
-cd Solana--Use
+The platform is designed for developers and advanced traders who want to leverage AI to gain an edge in the fast-paced Solana environment. It enables:
 
-# Create and activate a virtual environment
-python -m venv solana_venv
-source solana_venv/bin/activate  # On Windows: solana_venv\Scripts\activate
+Automated Research: Deploy AI agents to autonomously browse websites, read documentation, and extract critical information about Solana projects.
 
-# Install dependencies
+Intelligent Trading: Utilize a council of AI personas, each with a unique investment philosophy, to build consensus on trading decisions.
+
+On-Chain Interaction: Seamlessly execute transactions, manage assets, and mint NFTs through integrated wallet and Metaplex functionalities.
+
+Internet-Native Payments: Process micropayments for premium data or services using the innovative x402 protocol, allowing agents to operate as autonomous economic entities.
+
+System Architecture
+
+The platform is built on a modern microservices architecture, ensuring scalability and maintainability.
+
+Client Layer (Solana E2B Trading Desktop): A desktop application built with React, providing the main user interface. It includes wallet connectivity, real-time dashboards, and manual controls.
+
+API Layer (MCP Server): A FastAPI backend that serves as the central hub. It exposes RESTful APIs and WebSocket connections for real-time communication with the client.
+
+Service Layer (The Multi-Agent Framework):
+
+Terminagent (Orchestrator): The primary agent that receives user requests, delegates tasks to specialized agents, and synthesizes their findings.
+
+Browser Service: Manages web automation tasks using Selenium and Helium, allowing agents to interact with web interfaces.
+
+Blockchain Service: Handles all on-chain interactions, including transactions, wallet management, and smart contract calls.
+
+AI Agent Council: A team of specialized AI agents (e.g., "Warren Buffett" for value, "Cathie Wood" for innovation) that analyze data and vote on trading decisions.
+
+Payment Service: Integrates the x402 protocol to handle automated micropayments for paywalled data or services.
+
+Data Layer: MongoDB stores persistent data like user information and agent memory, while Redis is used for caching and real-time messaging.
+
+External Integrations: The platform connects to Solana RPC nodes, AI model providers (OpenAI, Anthropic), NFT storage, and data analytics services like Birdeye.
+
+Part 1: Installation and Setup
+
+This section provides a complete guide to setting up the development environment.
+
+System Requirements:
+
+OS: Linux, macOS, or Windows with WSL2
+
+Python: 3.8+
+
+Node.js: 16+
+
+RAM: 16GB recommended
+
+Required Accounts:
+
+E2B Account: For sandboxed cloud browser environments. Get an API key from https://e2b.dev.
+
+AI Provider Keys: For OpenAI, Anthropic, or other supported models.
+
+Solana Wallet: A base58 private key for on-chain actions.
+
+Installation Steps:
+
+Clone the Repository:
+
+Generated bash
+git clone https://github.com/your-repo/solana-terminals-ai-automation.git
+cd solana-terminals-ai-automation
+
+
+Backend Setup:
+
+Generated bash
+cd backend
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
-Environment Configuration
-Create a .env file in the project root with:
-
-SOLANA_PRIVATE_KEY=your_private_key_here
-SOLANA_RPC_URL=your_rpc_endpoint_here
-OPENAI_API_KEY=your_openai_key_here
-BIRDEYE_API_KEY=your_birdeye_key_here
-TRADING_ENABLED=false
-DEBUG_MODE=true
-MAX_TRADE_AMOUNT=0.1
-MAX_DAILY_TRADES=5
-Key Components
-1. Trading Agent System
-The core of the project is the trading agent system (
-solana_trading_desktop.py
- and 
-app_launcher.py
-). This system:
-
-Manages Solana wallet connections
-Executes trades based on market signals
-Monitors positions for stop-loss and take-profit
-Provides a desktop UI for monitoring
-python
-# Basic usage example
-from app_launcher import main
-
-if __name__ == "__main__":
-    main()
-2. Wallet Management
-The 
-SolanaWallet
- class in 
-solana_trading_desktop.py
- provides robust wallet management:
-
-Secure key handling
-Balance queries
-Token operations
-Transaction sending with retry logic
-3. Agent System
-The agent directory contains AI-powered automation agents that can:
-
-Analyze market trends
-Execute trading strategies
-Monitor wallet security
-Generate reports
-4. Browser Integration
-The browser directory provides web automation tools for:
-
-Market data scraping
-Token research
-Price chart analysis
-Sentiment tracking
-Core Features
-Automated Trading
-python
-# Example of setting up a trading agent
-from solana_trading_desktop import TradingAgent, TradingConfig
-
-config = TradingConfig(
-    max_trade_amount=0.1,
-    max_daily_trades=5,
-    risk_percentage=0.02,
-    trading_enabled=True
-)
-
-agent = TradingAgent(config)
-agent.start_trading()
-Market Analysis
-The market analyzer component can:
-
-Track token price movements
-Analyze volume patterns
-Monitor social sentiment
-Generate trading signals
-Wallet Security
-The system includes multiple security features:
-
-Private key encryption
-Connection redundancy with backup RPCs
-Transaction confirmation verification
-Automatic session timeouts
-Development Workflow
-Setup Environment
-Configure .env with necessary API keys
-Ensure RPC endpoints are reliable
-Start in Debug Mode
-Set DEBUG_MODE=true in .env
-Run with reduced trade amounts
-Test Components
-Use 
-examples.py
- to test individual components
-Monitor logs in the 
-logs/
- directory
-Deploy Trading Strategies
-Create strategy in agent/strategies/
-Test with paper trading
-Enable live trading once validated
-Best Practices
-Security First
-Never hardcode private keys
-Use environment variables
-Regularly rotate API keys
-Risk Management
-Set appropriate MAX_TRADE_AMOUNT
-Use stop-losses consistently
-Monitor the 
-trading_agent.log
-Performance Optimization
-Use 
-performance_monitor.py
- to track system health
-Optimize RPC usage with connection pooling
-Consider using backup RPCs during high-load periods
-Troubleshooting
-Common Issues:
-
-RPC Connection Failures
-Check network connectivity
-Verify RPC endpoint is operational
-Try alternate RPC URLs
-Transaction Failures
-Ensure sufficient SOL for fees
-Check for network congestion
-Verify transaction parameters
-API Limits
-Monitor rate limits on third-party APIs
-Implement exponential backoff strategies
-Consider premium API tiers for production
-2. MCP Server Guide: Solana--Use/mcp-server
-This section covers the Model Context Protocol (MCP) server integration for Solana--Use, which provides enhanced API capabilities and Phala Network integration.
-
-📚 Table of Contents - MCP Server
-MCP Server Overview
-Installation & Configuration
-Server Architecture
-API Reference
-Phala Integration
-Deployment Guide
-Security Considerations
-MCP Server Overview
-The MCP server is an Express.js-based application that extends the Solana--Use project with:
-
-RESTful API endpoints for Solana blockchain interactions
-Integration with Phala Network for confidential computing
-Enhanced transaction privacy and security features
-Cloud-ready deployment options
-Installation & Configuration
-bash
-# Navigate to the MCP server directory
-cd mcp-server
-
-# Install dependencies
-npm install  # or pnpm install
-
-# Set up environment variables
 cp .env.example .env
-# Edit .env to add PHALA_API_KEY and other settings
+# Edit the .env file with your API keys and wallet private key
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Bash
+IGNORE_WHEN_COPYING_END
 
-# Start the server
-npm start
-Required Environment Variables
-PHALA_API_KEY: API key for Phala Network integration
-BEARER_TOKEN: Authentication token for API requests
-SOLANA_RPC_URL: Solana RPC endpoint URL
-PORT: Server port (default: 3000)
-Server Architecture
-The MCP server follows a modular architecture:
+Frontend Setup:
 
-server.js: Main entry point that initializes Express and middleware
-routes.js: API route definitions and handlers
-phala-client.js: Client for Phala Network integration
-deployment.js: Utilities for cloud deployment
-javascript
-// Basic usage example
-const express = require('express');
-const app = express();
-const { setupSolanaRoutes } = require('./routes');
+Generated bash
+cd ../frontend
+npm install
+cp .env.example .env
+# Edit the .env file to point to the backend API URL
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Bash
+IGNORE_WHEN_COPYING_END
 
-setupSolanaRoutes(app, solanaConnection, phalaClient);
+Docker Setup (Recommended): For a consistent environment, use Docker.
 
-app.listen(3000, () => {
-  console.log('MCP server running on port 3000');
-});
-API Reference
-Account Information
-GET /api/account/:address
-
-Retrieves account information with Phala-enhanced privacy.
-
-javascript
-// Example response
-{
-  "address": "5YNmS1R9nNSCDzb5a7mMJ1dwK9uHeAAF4CmPEwKgVWr8",
-  "exists": true,
-  "lamports": 100000000,
-  "owner": "11111111111111111111111111111111",
-  "executable": false,
-  "rentEpoch": 311,
-  "confidentialData": {
-    "analysisTimestamp": "2025-06-13T19:47:44.000Z",
-    "privacyScore": 92,
-    "sensitiveOperations": false
-  }
-}
-Token Balances
-POST /api/token-balances
-
-Retrieves multiple token balances with confidential processing.
-
-javascript
-// Request body
-{
-  "walletAddress": "5YNmS1R9nNSCDzb5a7mMJ1dwK9uHeAAF4CmPEwKgVWr8",
-  "tokens": [
-    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
-    "So11111111111111111111111111111111111111112"
-  ]
-}
-Transaction Verification
-POST /api/verify-transaction
-
-Verifies transaction privacy using zero-knowledge proofs.
-
-javascript
-// Request body
-{
-  "signature": "5UfTNHekxQzUk4z7iZVp3pzDUUBwRGmH8fh7XwRrMrpDTZgf8xNv9jUVBU9FafmzZJUN6cfkQJk3wagPNNTwrAjw"
-}
-Network Status
-GET /api/network-status
-
-Retrieves Solana network status with Phala insights.
-
-Phala Integration
-Phala Network provides confidential computing capabilities for sensitive blockchain operations:
-
-How It Works
-Sensitive data is sent to Phala's Trusted Execution Environment
-Computation happens in a secure enclave
-Only verified results are returned
-Zero-knowledge proofs verify integrity
-Key Features
-Private token balance checks
-Confidential transaction analysis
-Secure key management
-Identity verification without revealing personal data
-Deployment Guide
-The MCP server can be deployed to various cloud platforms:
-
-AWS Deployment
-bash
-# Configure AWS credentials
-aws configure
-
-# Set environment variables
-export CLOUD_PROVIDER=aws
-export CLOUD_REGION=us-east-1
-
-# Run deployment script
-node deployment.js
-Google Cloud Platform
-bash
-# Authenticate with GCP
-gcloud auth login
-
-# Set environment variables
-export CLOUD_PROVIDER=gcp
-export CLOUD_PROJECT_ID=your-project-id
-
-# Run deployment script
-node deployment.js
-Docker Deployment
-bash
-# Build Docker image
+Generated bash
+# Ensure Docker and Docker Compose are installed
 docker-compose build
-
-# Start container
 docker-compose up -d
-Security Considerations
-API Key Management
-Store PHALA_API_KEY securely
-Rotate keys regularly
-Use environment variables, not hardcoded values
-Authentication
-Require BEARER_TOKEN for all API requests
-Implement rate limiting
-Consider IP whitelisting for production
-Data Privacy
-Use HTTPS for all connections
-Leverage Phala for sensitive operations
-Implement proper error handling to avoid info leaks
-Monitoring
-Set up logging for all API access
-Monitor for unusual request patterns
-Configure alerts for error conditions
-This comprehensive guide should provide you with everything needed to work with both the main Solana--Use project and its MCP server component. For further details, consult the README files in each directory and the inline documentation in the code.
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Bash
+IGNORE_WHEN_COPYING_END
+
+This will launch the backend server, the React frontend, MongoDB, and Redis containers.
+
+Part 2: The Backend - MCP Server & Terminagent
+
+The backend is the brain of the operation, orchestrated by the Terminagent.
+
+API Endpoints:
+
+The FastAPI server exposes a modular set of endpoints:
+
+/api/auth/: User registration, login, and profile management.
+
+/api/agent/: Endpoints to initiate and monitor tasks for the Terminagent (e.g., POST /run).
+
+/api/browser/: Endpoints for direct control over browser automation tasks.
+
+/api/blockchain/: Endpoints for fetching on-chain data and initiating transactions.
+
+/api/payment/: Endpoints for managing and tracking x402 payments.
+
+The Terminagent and the Agent Council:
+
+When a user initiates a task, such as "Research the BONK token and decide if it's a good investment," the Terminagent coordinates the following workflow:
+
+Data Collection: The Terminagent dispatches a browser agent to visit sites like Birdeye, DexScreener, and official project websites. The agent extracts key metrics, tokenomics, and community sentiment, taking screenshots for visual analysis.
+
+Independent Analysis: The collected data is presented to the AI Agent Council. Each member analyzes the data from its unique perspective:
+
+Warren Buffett: Focuses on fundamentals, long-term value, and project viability.
+
+Cathie Wood: Looks for disruptive innovation and high-growth potential.
+
+Charlie Munger: Acts as a risk checker, identifying potential red flags and dangers.
+
+Ben Graham: Performs a deep value analysis based on on-chain metrics.
+
+Risk Manager: A specialized agent that assesses overall risk, checks against predefined safety limits, and has ultimate veto power.
+
+Consensus Building: The agents "vote" on a course of action (e.g., BUY, SELL, HOLD), providing a confidence score. A trade is only executed if the weighted confidence score exceeds a predefined threshold (e.g., 70%).
+
+Execution: If consensus is reached and the Risk Manager approves, the Terminagent instructs the Blockchain Service to execute the trade, respecting all safety parameters like maximum position size.
+
+Part 3: The Frontend - Solana E2B Trading Desktop
+
+The frontend is a React application that provides a comprehensive interface for monitoring and controlling the multi-agent system.
+
+Key Components:
+
+Dashboard: An overview of active positions, P&L, agent performance, and market metrics.
+
+Agent Chat Interface: A conversational UI to issue commands to the Terminagent and view its real-time thought process.
+
+Browser Automation View: A live view of what the browser automation agent is "seeing" and doing, including screenshots and logs.
+
+Wallet Integration: Connects to user wallets via the Solana Wallet Adapter for authentication and manual transaction signing.
+
+Manual Controls:
+
+Emergency Stop: A one-click button to immediately halt all trading activity and close open positions.
+
+Pause Trading: A toggle to temporarily pause the execution of new trades.
+
+Position Management: A view to manually monitor and close active positions.
+
+Part 4: x402 Payment Protocol - Enabling Autonomous Agents
+
+To allow agents to autonomously access paid APIs or premium data, the platform integrates the x402 payment protocol.
+
+How it Works: When an agent makes an HTTP request to a resource that requires payment, the server responds with a 402 Payment Required status. The platform's X402PaymentHandler automatically detects this, constructs, signs, and sends the required SPL token payment. Upon successful payment, the original request is retried, and the agent gains access to the data.
+
+Autonomous Economy: This enables the AI agents to function as true autonomous economic entities. For example, the system can be configured to automatically pay for high-resolution market data from a premium API if the agents determine it's necessary for making a high-confidence decision.
+
+Safety: An auto_approve_threshold is configured to prevent uncontrolled spending. Any payment above this limit requires manual user approval.
+
+Part 5: Deployment and Maintenance
+
+The platform is designed for robust production deployment.
+
+Containerization: The entire application (backend, frontend, databases) is containerized using Docker, allowing for consistent deployments across different environments.
+
+CI/CD: A GitHub Actions workflow is provided to automate testing and deployment. On every push to the main branch, the pipeline will:
+
+Run backend and frontend tests.
+
+Build and push Docker images to a container registry (e.g., Google Container Registry, AWS ECR).
+
+Deploy the new images to a cloud provider like Google Cloud Run or AWS App Runner.
+
+Cloud Infrastructure: For production, it is recommended to use managed cloud services like MongoDB Atlas for the database and Redis Cloud for caching to ensure high availability and scalability.
+
+Monitoring: Integration with services like Google Cloud Monitoring or AWS CloudWatch is essential for tracking application performance, error rates, and resource usage, with alerts configured for critical issues.
+
+Conclusion
+
+The Solana Terminals AI Automation platform represents a significant leap forward in applying AI to the blockchain space. By combining a multi-agent consensus mechanism with powerful browser automation, direct blockchain integration, and autonomous payment capabilities, it provides a sophisticated and highly extensible framework for developers and traders seeking to automate their strategies and gain a deeper, AI-driven understanding of the Solana ecosystem.

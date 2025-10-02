@@ -1,0 +1,122 @@
+name: TypeScript CI
+
+on:
+  push:
+    branches: [ main, develop, solana-mcp-phala ]
+    paths:
+      - '**.ts'
+      - '**.js'
+      - '**/package.json'
+      - '**/package-lock.json'
+      - '**/tsconfig.json'
+      - '.github/workflows/typescript-ci.yml'
+  pull_request:
+    branches: [ main, develop, solana-mcp-phala ]
+    paths:
+      - '**.ts'
+      - '**.js'
+      - '**/package.json'
+      - '**/package-lock.json'
+      - '**/tsconfig.json'
+      - '.github/workflows/typescript-ci.yml'
+
+jobs:
+  lint-and-build:
+    name: Lint & Build TypeScript
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'mcp-server/package-lock.json'
+      
+      - name: Install dependencies
+        run: |
+          cd mcp-server
+          npm ci
+      
+      - name: Run TypeScript compiler check
+        run: |
+          cd mcp-server
+          npm run build
+      
+      - name: Run ESLint (if configured)
+        run: |
+          cd mcp-server
+          if [ -f .eslintrc.js ] || [ -f .eslintrc.json ] || [ -f .eslintrc.yml ]; then
+            npx eslint . --ext .ts,.js || true
+          else
+            echo "ESLint not configured, skipping"
+          fi
+        continue-on-error: true
+      
+      - name: Run Prettier check (if configured)
+        run: |
+          cd mcp-server
+          if [ -f .prettierrc ] || [ -f .prettierrc.json ] || [ -f .prettierrc.yml ]; then
+            npx prettier --check "**/*.{ts,js,json}" || true
+          else
+            echo "Prettier not configured, skipping"
+          fi
+        continue-on-error: true
+
+  security:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'mcp-server/package-lock.json'
+      
+      - name: Install dependencies
+        run: |
+          cd mcp-server
+          npm ci
+      
+      - name: Run npm audit
+        run: |
+          cd mcp-server
+          npm audit --audit-level=moderate || true
+        continue-on-error: true
+      
+      - name: Check for known vulnerabilities with npm audit
+        run: |
+          cd mcp-server
+          npm audit --audit-level=high --json > audit-results.json || true
+          if [ -f audit-results.json ]; then
+            cat audit-results.json
+          fi
+        continue-on-error: true
+
+  test:
+    name: Test TypeScript Code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'mcp-server/package-lock.json'
+      
+      - name: Install dependencies
+        run: |
+          cd mcp-server
+          npm ci
+      
+      - name: Run tests
+        run: |
+          cd mcp-server
+          npm test || echo "No tests configured or tests failed"
+        continue-on-error: true

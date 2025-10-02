@@ -1,5 +1,11 @@
 # Solana-Automation Toolkit
 
+[![CI](https://github.com/jparram/SolanaAutomation/workflows/CI/badge.svg)](https://github.com/jparram/SolanaAutomation/actions/workflows/ci.yml)
+[![Python CI](https://github.com/jparram/SolanaAutomation/workflows/Python%20CI/badge.svg)](https://github.com/jparram/SolanaAutomation/actions/workflows/python-ci.yml)
+[![TypeScript CI](https://github.com/jparram/SolanaAutomation/workflows/TypeScript%20CI/badge.svg)](https://github.com/jparram/SolanaAutomation/actions/workflows/typescript-ci.yml)
+[![CodeQL](https://github.com/jparram/SolanaAutomation/workflows/CodeQL%20Security%20Analysis/badge.svg)](https://github.com/jparram/SolanaAutomation/actions/workflows/codeql-analysis.yml)
+[![OSSF Scorecard](https://github.com/jparram/SolanaAutomation/workflows/OSSF%20Scorecard/badge.svg)](https://github.com/jparram/SolanaAutomation/actions/workflows/scorecard.yml)
+
 ```
    ███████╗ ██████╗ ██╗      █████╗ ███╗   ██╗ █████╗ 
    ██╔════╝██╔═══██╗██║     ██╔══██╗████╗  ██║██╔══██╗
@@ -50,6 +56,7 @@ x402 protocol, allowing agents to operate as autonomous economic entities.
 - [🎨 Frontend - Trading Desktop](#frontend---solana-e2b-trading-desktop)
 - [🔐 Security & Best Practices](#security--best-practices)
 - [🚀 Deployment Guide](#deployment-guide)
+- [🔄 CI/CD & Security Scanning](#cicd--security-scanning)
 
 ### MCP Server
 - [🌐 MCP Server Overview](#mcp-server-overview)
@@ -388,9 +395,62 @@ node deployment.js
 5. **Deploy trading strategies** after thorough testing
 6. **Monitor and optimize** using the performance tools
 
+## 🔄 CI/CD & Security Scanning
+
+This project includes comprehensive CI/CD pipelines with automated security scanning:
+
+### Automated Workflows
+
+- **🔍 Python CI** - Linting (ruff, black, isort), type checking (mypy), security scanning (pip-audit), and testing (pytest)
+- **🔧 TypeScript CI** - Build verification, linting (ESLint), formatting (Prettier), and security scanning (npm audit)
+- **🛡️ CodeQL Analysis** - Advanced security vulnerability detection for Python and JavaScript/TypeScript
+- **📊 OSSF Scorecard** - Repository security posture assessment with 18+ security checks
+- **🤖 Dependabot** - Automated dependency updates for Python, npm, and GitHub Actions
+
+### Security Features
+
+All workflows include:
+- Dependency vulnerability scanning
+- Static code analysis
+- Best practice enforcement
+- Weekly security audits
+- Automated security updates via Dependabot
+
+### Documentation
+
+For detailed information about the CI/CD setup, configuration, and local usage, see [CI_CD_SETUP.md](CI_CD_SETUP.md).
+
+### Running Checks Locally
+
+**Python:**
+```bash
+# Install tools
+pip install ruff black isort mypy pytest pip-audit
+
+# Run checks
+ruff check .
+black --check .
+isort --check-only .
+mypy .
+pip-audit
+pytest
+```
+
+**TypeScript:**
+```bash
+cd mcp-server
+npm install
+npm run lint
+npm run format:check
+npm run build
+npm audit
+```
+
 ## 🤝 Contributing
 
 This project is developed by **8bit** and **@0rdlibrary**. Contributions are welcome!
+
+All contributions are automatically checked by our CI/CD pipelines. Please ensure your code passes linting, formatting, and security checks before submitting a PR.
 
 ## 📄 License
 

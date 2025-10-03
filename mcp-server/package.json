@@ -28,7 +28,7 @@
     "dotenv": "^16.5.0",
     "solana-agent-kit": "^2.0.10",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.0.0",

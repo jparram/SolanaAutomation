@@ -23,7 +23,7 @@
   "license": "ISC",
   "packageManager": "pnpm@10.11.1",
   "dependencies": {
-    "@solana/web3.js": "^1.98.2",
+    "@solana/web3.js": "^1.98.4",
     "@types/node": "^24.0.1",
     "dotenv": "^16.5.0",
     "solana-agent-kit": "^2.0.10",
